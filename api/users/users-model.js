@@ -20,7 +20,7 @@ function find() {
    */
   return db('users as u')
     .join('roles as r', 'u.role_id', '=', 'r.role_id')
-    .select('u.user_id', 'u.username', 'r.role_name as role')
+    .select('u.user_id', 'u.username', 'r.role_name')
 }
 
 function findBy(filter) {
